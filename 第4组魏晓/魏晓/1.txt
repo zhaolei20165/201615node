@@ -1,0 +1,43 @@
+操作文件
+1. Mkdir （创建文件夹）
+2. Touch 文件名 （创建文件）
+3. Rm 文件名(删除文件)
+4. Cat 文件名（查看文件）
+5. Vi 文件名（编辑文件i键编辑）
+6. Esc键+:Wq（保存退出）
+
+常用指令
+7. Git status查看git状态
+8. Git add 文件名 放入暂存
+9. Git commit -m “修改的内容备注” 添加历史区
+10. Git log 查看编辑日志  --graph图标 --online一行 --grep=””搜索指定日志
+11. Git reflog 查看所有日志
+12. Git reset HEAD 文件名 删除暂存区
+13.Git reset --hard 版本号7位 （返回某个版本 ^退回上个版本）
+
+版本对比
+14. Git diff 工作区和暂存区对比
+15.Git diff --cached 暂存区和版本库对比
+16.Git diff master 工作区和版本库对比  
+
+分支操作                                
+17. Git branch 查看git 分支，创建分支+分支名称
+18. Git checkout分支名称 切换分支
+19. Git branch -D 分支名称 删除分支要切换到其它分支
+20. Git checkout -b 克隆创建并切换分支
+21. Git merge 分支名称 合并分支
+22. 产生冲突，手动修改提交
+
+提交关联仓库
+1.本地建立readme.md 和gitignore文件
+$echo “.idea” >> .gitignore（为忽略文件添加内容）
+Gitignore内容：.idea     ds_store     bower_components（无需上传的文件，回车隔开）
+2.Github网站 new respository 创建新仓库，自定义仓库名称
+3.git remote add origin 仓库地址 添加远程仓库
+4. git push origin master -u 提交到github仓库（-u后  origin下次提交不用输入）
+5. 发布静态页必须在gh-pages分支且文件不能为空，空文件夹无法提交
+
+多人协作
+1. 点击Fork创建分支， git clone 地址 文件名 克隆项目
+2. Git pull origin master 下载
+2. git push origin master 提交
